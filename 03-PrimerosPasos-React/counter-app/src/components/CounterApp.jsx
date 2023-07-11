@@ -1,10 +1,10 @@
-import React from 'react'
+
 
 const CounterApp = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>Conter App</h1>
+    </>
   )
 }
 
