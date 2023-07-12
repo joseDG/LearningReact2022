@@ -1,3 +1,4 @@
+import AddCategory from "./components/AddCategory";
 
 
 function App() {
@@ -5,6 +6,8 @@ function App() {
   return (
     <>
       <h1>GifExpertApp</h1>
+
+      <AddCategory />
     </>
   );
 }
