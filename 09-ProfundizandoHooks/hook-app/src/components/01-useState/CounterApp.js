@@ -1,35 +1,20 @@
-//UseState
+//Hook USE_STATE
 
-import React, { useState } from "react";
-import "./counter.css";
+import {useState} from 'react'
 
-export const CounterApp = () => {
-  const [state, setState] = useState({
-    counter1: 10,
-    counter2: 20,
-    counter3: 20,
-    counter4: 20,
-  });
+const CounterApp = () => {
 
-  const { counter1, counter2 } = state;
+  const [counter, setCounter] = useState(10)
 
   return (
     <>
-      <h1>Counter1 {counter1}</h1>
-      <h1>Counter2 {counter2}</h1>
-      <hr />
+      <h1>Counter { counter} </h1>
 
-      <button
-        className="btn btn-primary"
-        onClick={() => {
-          setState({
-            ...state,
-            counter1: counter1 + 1,
-          });
-        }}
-      >
-        +1{" "}
-      </button>
+      <hr/>
+
+      <button onClick={ () => setCounter( counter + 1)}>+1</button>
     </>
-  );
-};
+  )
+}
+
+export default CounterApp
