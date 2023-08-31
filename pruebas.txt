@@ -1,0 +1,6 @@
+1.- isntalar jest
+2.- crear una carpeta al nivel de proyecto con nombre (test)
+3.- crear una prueba demo en la carpeta test (demo.test.js)
+4.- configurar package.json ("test":"jest --wathAll")
+5.- encontrar los metodos enla documentacion de jest
+6.- atajos de jest se utiliza (npm add -D @types/jest)

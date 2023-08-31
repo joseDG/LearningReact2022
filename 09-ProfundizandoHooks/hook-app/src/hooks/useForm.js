@@ -1,22 +1,25 @@
-import { useState } from "react"
+import { useState } from 'react';
 
-//Srive para los formularios
-export const useForm = ( initialState = {} ) => {
+export const useForm = ( initialForm = {} ) => {
+  
+    const [ formState, setFormState ] = useState( initialForm );
 
-    const [values, setValues] = useState(initialState);
-
-    const reset = () => {
-        setValues( initialState );
-    }
-
-    const handleInputChange = ({ target }) => {
-
-        setValues({
-            ...values,
-            [ target.name ]: target.value
+    const onInputChange = ({ target }) => {
+        const { name, value } = target;
+        setFormState({
+            ...formState,
+            [ name ]: value
         });
     }
 
-    return [ values, handleInputChange, reset ];
-  
+    const onResetForm = () => {
+        setFormState( initialForm );
+    }
+
+    return {
+        ...formState,
+        formState,
+        onInputChange,
+        onResetForm,
+    }
 }
